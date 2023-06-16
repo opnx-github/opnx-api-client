@@ -468,5 +468,5 @@ There are two main ways to use it, one is to use the command without logging in,
 </details>
 
 ### More examples
-An extensive set of examples, covering most aspects of the API, can be found at https://bitbucket.org/coinflex/opnx-api-client/src/opnx_kiwi/src/test/java/com/opnx/api/client/examples
+An extensive set of examples, covering most aspects of the API, can be found at https://github.com/opnx-github/opnx-api-client/tree/master/src/test/java/com/opnx/api/client/examples
 
