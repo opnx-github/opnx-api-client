@@ -11,7 +11,7 @@ opnx-api-client is a lightweight Java library , providing complete API coverage,
 2. Add the following Maven dependency to your project's `pom.xml`:
 ```
     <dependency>
-      <groupId>com.opnx.api.client</groupId>
+      <groupId>com.opnx.api</groupId>
       <artifactId>opnx-api-client</artifactId>
       <version>1.0.0</version>
     </dependency>
