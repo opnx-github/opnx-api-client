@@ -1,6 +1,6 @@
 # Java Opnx API
 
-opnx-api-client is a lightweight Java library , providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
+opnx-api-client is a lightweight Java library, providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
 
 ## Features
 * Support for synchronous and asynchronous REST requests to all stream endpoints.
