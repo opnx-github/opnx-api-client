@@ -1,9 +1,9 @@
 # Java Opnx API
 
-opnx-api-client is a lightweight Java library , providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
+opnx-api-client is a lightweight Java library, providing complete API coverage, and supporting synchronous and asynchronous requests, as well as event streaming using WebSockets.
 
 ## Features
-* Support for synchronous and asynchronous REST requests to all stream endpoints.
+* Support for synchronous and asynchronous REST requests to all endpoints.
 * Support for User Data, Trade, and Depth event streaming 
 
 ## Installation
@@ -30,19 +30,19 @@ There are three main client classes that can be used to interact with the API:
 3. `OpnxApiWebSocketClient`  a data streaming client using Opnx WebSocket API.
 
 These can be instantiated through the corresponding factory method of `OpnxApiClientFactory`.
-When the parameter is true, the test is used, and the parameter is false, which is the live environment.
+To use the client in the staging environment set the parameter to true, and set it to false to access the live environment.
 ```java
  OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance("API_KEY", "API_KEY_SECRET",true);
  OpnxApiRestClient client = factory.newRestClient();
 ```
 
-Users can only pass their own Api Key and Secret to access the live environment
+Another way to access the live environment is to simply only pass your Api Key and Secret
 ```java
  OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance("API_KEY", "API_KEY_SECRET");
  OpnxApiRestClient client = factory.newRestClient();
 ```
 
-If the client only needs to access endpoints which do not require additional security, then these parameters are optional.
+If the client only needs to access endpoints which do not require additional authentication, then these parameters are optional.
 
 Once the client is instantiated, it is possible to start making requests to the API.
 
@@ -75,13 +75,13 @@ System.out.println(JSONObject.toJSONString(accountInfo));
                     "asset": "FLEX",
                     "total": "1585.890",
                     "available": "325.890",
-                    "reserved": "1260",
+                    "reserved": "1260.0",
                     "lastUpdatedAt": "1593627415123"
                 }
             ],
             "positions": [
                 {
-                    "marketCode": "FLEX-USDT-SWAP-PER", 
+                    "marketCode": "FLEX-USDT-SWAP-LIN", 
                     "baseAsset": "FLEX", 
                     "counterAsset": "USDT", 
                     "position": "11411.1", 
@@ -90,16 +90,11 @@ System.out.println(JSONObject.toJSONString(accountInfo));
                     "positionPnl": "31608.7470", 
                     "estLiquidationPrice": "2.59", 
                     "lastUpdatedAt": "1637876701404",
-                    "marginBalance": "45264.03",
-                    "maintenanceMargin": "10886.1894",
-                    "marginRatio": "0.24",
-                    "leverage": "3"
                 }
             ],
             "collateral": "1231231",
             "notionalPositionSize": "50000.0",
             "portfolioVarMargin": "500",
-            "riskRatio": "20000.0000",
             "maintenanceMargin": "1231",
             "marginRatio": "12.3179",
             "liquidating": false,
@@ -354,9 +349,9 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
 
 
 ### WebSocket Requests
-There are two main ways to use it, one is to use the command without logging in, and the other is to use the command after logging in.
+There are two main ways to use it, one is to use the command without authenticating, and the other is to use the command after authenticating.
 
-#### Login-free subscription depth
+#### Subscribe to order book depth without authentication
 ```java
     OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(true,true);
     OpnxApiWebSocketClient webSocketClient = factory.newWebSocketClient();
@@ -415,9 +410,9 @@ There are two main ways to use it, one is to use the command without logging in,
 </details>
 
 
-#### Login to place an order
-##### Multiple callbacks can be placed in callbackAndEventMap to handle the responses of different events. It should be noted that when the same event is placed, the callbacks placed later will overwrite the callbacks placed earlier, so that the callbacks placed first will not is called.
-##### You need to place an order in the login callback method body, because you need to log in to place an order
+#### Authenticate the connection (login) to place an order
+##### Multiple callbacks can be placed in callbackAndEventMap to handle the responses of different events. It should be noted that when the same event is placed, the more recent callbacks placed will overwrite the older callbacks, meaning the first callback placed will not be called.
+##### You need to place an order in the login callback method body, because your order requests need to be authenticated.
 ```java
     OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(true,true);
     OpnxApiWebSocketClient webSocketClient = factory.newWebSocketClient();
