@@ -14,10 +14,10 @@ public class CandlesExampleAsync {
 
     public static void main(String[] args) {
         //OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
-        OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(null,null,true,false);
+        OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(null,null,false);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getCandles("BTC-USDT-SWAP-LIN", "60s", 10L, 1L, null,
+        client.getCandles("BTC-USDT-SWAP-LIN", "60s", 10L, null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
     }

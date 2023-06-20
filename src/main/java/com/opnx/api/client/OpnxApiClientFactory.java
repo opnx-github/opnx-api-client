@@ -156,6 +156,19 @@ public class OpnxApiClientFactory {
      *
      * @param apiKey              the API key
      * @param secret              the Secret
+     * @param useTestNet          true if endpoint is test network URL; false if endpoint is production API URL.
+     * @return the opnx api client factory.
+     */
+    public static OpnxApiClientFactory newInstance(String apiKey, String secret, boolean useTestNet ) {
+        return new OpnxApiClientFactory(apiKey, secret, useTestNet);
+    }
+
+
+    /**
+     * New instance with optional Test Network endpoint.
+     *
+     * @param apiKey              the API key
+     * @param secret              the Secret
      * @param nonce               User generated, eg: "123"
      * @param timestamp           Timestamp , eg: YYYY-MM-DDThh:mm:ss  "2020-04-30T15:20:30"
      * @param useTestNet          true if endpoint is test network URL; false if endpoint is production API URL.

@@ -32,7 +32,7 @@ There are three main client classes that can be used to interact with the API:
 These can be instantiated through the corresponding factory method of `OpnxApiClientFactory`.
 When the parameter is true, the test is used, and the parameter is false, which is the live environment.
 ```java
- OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance("API_KEY", "API_KEY_SECRET",true,true);
+ OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance("API_KEY", "API_KEY_SECRET",true);
  OpnxApiRestClient client = factory.newRestClient();
 ```
 
