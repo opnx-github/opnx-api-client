@@ -252,7 +252,7 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
 
 #### GET /v3/trades
 ```java
- client.getPublicTrades("FlEX-USDT", 6L, null, null,response -> System.out.println(JSONObject.toJSONString(response)));
+ client.getPublicTrades("FLEX-USDT", 6L, null, null,response -> System.out.println(JSONObject.toJSONString(response)));
 ```
 <details>
  <summary>View Response</summary>
