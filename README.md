@@ -463,5 +463,5 @@ There are two main ways to use it, one is to use the command without authenticat
 </details>
 
 ### More examples
-An extensive set of examples, covering most aspects of the API, can be found at https://github.com/opnx-github/opnx-api-client/tree/master/src/test/java/com/opnx/api/client/examples
+An extensive set of examples, covering most aspects of the API, can be found at https://github.com/opnx-github/opnx-api-client/tree/main/src/test/java/com/opnx/api/client/examples
 
