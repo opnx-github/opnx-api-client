@@ -17,7 +17,7 @@ public class CandlesExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(null,null,false);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getCandles("BTC-USDT-SWAP-LIN", "60s", 10L, null, null,
+        client.getCandles("BTC-oUSD-SWAP-LIN", "60s", 10L, null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
     }

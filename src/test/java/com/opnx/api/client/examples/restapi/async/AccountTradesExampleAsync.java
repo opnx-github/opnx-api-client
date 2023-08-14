@@ -17,7 +17,7 @@ public class AccountTradesExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getAccountTrades("BTC-USDT-SWAP-LIN", 10L, null, null,
+        client.getAccountTrades("BTC-oUSD-SWAP-LIN", 10L, null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
     }

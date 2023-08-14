@@ -12,12 +12,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.List;
-
-/**
- *
- *
- * @see
- */
 public class CandlesEventDeserializer extends JsonDeserializer<CandlesEvent> {
   private static Logger logger = Logger.getLogger( CandlesEventDeserializer.class.getName());
   private ObjectMapper mapper;

@@ -16,7 +16,7 @@ public class MarketsExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getMarketsByMarketCode("BTC-USDT-SWAP-LIN",
+        client.getMarketsByMarketCode("BTC-oUSD-SWAP-LIN",
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
     }

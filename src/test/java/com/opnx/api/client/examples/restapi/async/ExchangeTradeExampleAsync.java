@@ -16,7 +16,7 @@ public class ExchangeTradeExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getPublicTrades("BTC-USDT-SWAP-LIN", 6L, null, null,
+        client.getPublicTrades("BTC-oUSD-SWAP-LIN", 6L, null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
 

@@ -12,12 +12,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.List;
-
-/**
- *
- *
- * @see
- */
 public class TradeEventDeserializer extends JsonDeserializer<TradeEvent> {
   private static Logger logger = Logger.getLogger( TradeEventDeserializer.class.getName());
   private ObjectMapper mapper;

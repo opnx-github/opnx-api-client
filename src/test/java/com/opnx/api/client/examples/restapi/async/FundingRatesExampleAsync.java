@@ -16,7 +16,7 @@ public class FundingRatesExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getFundingRates("BTC-USDT-SWAP-LIN", 6L, null, null,
+        client.getFundingRates("BTC-oUSD-SWAP-LIN", 6L, null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
     }
 

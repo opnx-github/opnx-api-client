@@ -8,7 +8,9 @@
     <artifactId>opnx-api-client</artifactId>
     <version>1.0.0</version>
 
-
+    <name>opnx-api-client</name>
+    <description>opnx-api-client is a lightweight Java library</description>
+    <url>https://github.com/opnx-github/opnx-api-client</url>
     <properties>
         <com.squareup.retrofit2.version>2.4.0</com.squareup.retrofit2.version>
         <fastjson.version>1.2.62</fastjson.version>
@@ -85,6 +87,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>

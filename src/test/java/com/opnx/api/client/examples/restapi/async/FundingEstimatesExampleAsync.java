@@ -11,7 +11,7 @@ public class FundingEstimatesExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getFundingEstimatesByMarketCode("BTC-USDT-SWAP-LIN",
+        client.getFundingEstimatesByMarketCode("BTC-oUSD-SWAP-LIN",
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
 

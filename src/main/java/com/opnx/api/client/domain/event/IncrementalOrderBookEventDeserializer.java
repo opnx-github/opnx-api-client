@@ -11,11 +11,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-/**
- *
- *
- * @see
- */
 public class IncrementalOrderBookEventDeserializer extends JsonDeserializer<IncrementalOrderBookEvent> {
   private static Logger logger = Logger.getLogger( IncrementalOrderBookEventDeserializer.class.getName());
   private ObjectMapper mapper;

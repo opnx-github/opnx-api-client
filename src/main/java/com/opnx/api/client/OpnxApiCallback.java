@@ -12,8 +12,8 @@ public interface OpnxApiCallback<T> {
 
     /**
      *  Called whenever a response comes back from the Opnx API.
-     * @param event
-     * @param opnxApiWebSocketListener
+     * @param event   opnx event
+     * @param opnxApiWebSocketListener opnx api websocket listener
      */
     void onResponse(T event, OpnxApiWebSocketListener<T> opnxApiWebSocketListener);
 

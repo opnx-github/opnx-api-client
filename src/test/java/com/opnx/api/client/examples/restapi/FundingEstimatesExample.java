@@ -13,7 +13,7 @@ public class FundingEstimatesExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<FundingEstimateV3Resp>> fundingEstimatesByMarketCode = client.getFundingEstimatesByMarketCode("BTC-USDT-SWAP-LIN");
+        OpnxV3RestResponse<List<FundingEstimateV3Resp>> fundingEstimatesByMarketCode = client.getFundingEstimatesByMarketCode("BTC-oUSD-SWAP-LIN");
         System.out.println(JSONObject.toJSONString(fundingEstimatesByMarketCode));
     }
 }

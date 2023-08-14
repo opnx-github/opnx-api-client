@@ -11,11 +11,7 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-/**
- *
- *
- * @see
- */
+
 public class ModifyOrderEventDeserializer extends JsonDeserializer<ModifyOrderEvent> {
   private static Logger logger = Logger.getLogger( ModifyOrderEventDeserializer.class.getName());
   private ObjectMapper mapper;

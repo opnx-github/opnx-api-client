@@ -10,12 +10,6 @@ import com.opnx.api.client.domain.messages.LoginCommand;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
-
-/**
- *
- *
- * @see
- */
 public class LoginEventDeserializer extends JsonDeserializer<LoginEvent> {
   private static Logger logger = Logger.getLogger( LoginCommand.class.getName());
   private ObjectMapper mapper;

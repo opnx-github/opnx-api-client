@@ -60,36 +60,40 @@ public class OpnxApiConfig {
     }
 
     /**
-     * REST API base URL.
+     *
+     * @return REST API base URL.
      */
     public static String getApiBaseUrl() {
         return String.format("https://%s", getBaseDomain());
     }
 
     /**
-     * Streaming API base URL.
+     *
+     * @return Streaming API base URL.
      */
     public static String getStreamApiBaseUrl() {
         return String.format(WS_URL, getBaseDomain());
     }
 
     /**
-     * Asset info base URL.
+     *
+     * @return Asset info base URL.
      */
     public static String getAssetInfoApiBaseUrl() {
         return String.format("https://%s/", getBaseDomain());
     }
 
     /**
-     * Test Network API base URL.
+     *
+     * @return Test Network API base URL.
      */
     public static String getTestNetBaseUrl() {
         return String.format("https://%s", TESTNET_DOMAIN);
     }
 
     /**
-     * Streaming Test Network base URL.
-     * wss://api-durian.cfdev.pro/v2/websocket
+     *
+     * @return Streaming Test Network base URL.
      */
     public static String getStreamTestNetBaseUrl() {
         return String.format(WS_URL, TESTNET_DOMAIN);

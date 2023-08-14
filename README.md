@@ -81,9 +81,9 @@ System.out.println(JSONObject.toJSONString(accountInfo));
             ],
             "positions": [
                 {
-                    "marketCode": "FLEX-USDT-SWAP-LIN", 
+                    "marketCode": "FLEX-oUSD-SWAP-LIN", 
                     "baseAsset": "FLEX", 
-                    "counterAsset": "USDT", 
+                    "counterAsset": "oUSD", 
                     "position": "11411.1", 
                     "entryPrice": "3.590", 
                     "markPrice": "6.360", 
@@ -133,7 +133,7 @@ System.out.println(JSONObject.toJSONString(subAccounts));
 
 #### GET /v3/positions
 ```java
-OpnxV3RestResponse<List<PositionsV3Resp>> accountPositions = client.getAccountPositions(Arrays.asList("13670979-1621913298587", "test_opnx_api"), "BTC-USDT-SWAP-LIN");
+OpnxV3RestResponse<List<PositionsV3Resp>> accountPositions = client.getAccountPositions(Arrays.asList("13670979-1621913298587", "test_opnx_api"), "BTC-oUSD-SWAP-LIN");
 System.out.println(JSONObject.toJSONString(accountPositions));
 ```
 <details>
@@ -148,12 +148,12 @@ System.out.println(JSONObject.toJSONString(accountPositions));
             "positions": [
                 {
                     "baseAsset": "BTC",
-                    "counterAsset": "USDT",
+                    "counterAsset": "oUSD",
                     "entryPrice": "22938.97488422",
                     "estLiquidationPrice": "12208536.690",
                     "lastUpdatedAt": "1677024022627",
                     "markPrice": "23571.790",
-                    "marketCode": "BTC-USDT-SWAP-LIN",
+                    "marketCode": "BTC-oUSD-SWAP-LIN",
                     "position": "-1.795000000",
                     "positionPnl": "-1135.90313282510000000"
                 }
@@ -168,7 +168,7 @@ System.out.println(JSONObject.toJSONString(accountPositions));
 
 #### GET /v3/exchange-trades
 ```java
- OpnxV3RestResponse<List<PublicTradesV3Resp>> publicTrades = client.getPublicTrades("BTC-USDT-SWAP-LIN", 6L, null, null);
+ OpnxV3RestResponse<List<PublicTradesV3Resp>> publicTrades = client.getPublicTrades("BTC-oUSD-SWAP-LIN", 6L, null, null);
  System.out.println(JSONObject.toJSONString(publicTrades));
 ```
 <details>
@@ -179,7 +179,7 @@ System.out.println(JSONObject.toJSONString(accountPositions));
     "success": true,
     "data": [
         {
-            "marketCode": "BTC-USDT-SWAP-LIN",
+            "marketCode": "BTC-oUSD-SWAP-LIN",
             "matchPrice": "9600.00000" ,
             "matchQuantity": "0.100000" ,
             "side": "BUY" ,
@@ -194,7 +194,7 @@ System.out.println(JSONObject.toJSONString(accountPositions));
 
 #### GET /v3/candles
 ```java
-OpnxV3RestResponse<List<CandlesV3Resp>> candles = client.getCandles("BTC-USDT-SWAP-LIN", "60s", 10L, null, null);
+OpnxV3RestResponse<List<CandlesV3Resp>> candles = client.getCandles("BTC-oUSD-SWAP-LIN", "60s", 10L, null, null);
 System.out.println(JSONObject.toJSONString(candles));
 ```
 <details>
@@ -287,7 +287,7 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
 
 #### GET /v3/markets
 ```java
- client.getMarketsByMarketCode("BTC-USDT-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
+ client.getMarketsByMarketCode("BTC-oUSD-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
 ```
 <details>
  <summary>View Response</summary>
@@ -297,13 +297,13 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
     "data": [
         {
             "base": "BTC",
-            "counter": "USDT",
+            "counter": "oUSD",
             "indexPrice": "23385.460",
             "lastUpdatedAt": "1677485772175",
             "listedAt": "1608621449015",
             "lowerPriceBound": "11784.567",
             "markPrice": "23569.135",
-            "marketCode": "BTC-USDT-SWAP-LIN",
+            "marketCode": "BTC-oUSD-SWAP-LIN",
             "minSize": "0.001",
             "name": "BTC/USDT Perp",
             "referencePair": "BTC/USDT",
@@ -320,7 +320,7 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
 
 #### GET /v3/tickers
 ```java
- client.getTickersByMarketCode("BTC-USDT-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
+ client.getTickersByMarketCode("BTC-oUSD-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
 ```
 <details>
  <summary>View Response</summary>
@@ -336,7 +336,7 @@ To make an asynchronous request it is necessary to use the OpnxApiAsyncRestClien
             "lastUpdatedAt": "1677485905039",
             "low24h": "23140.760",
             "markPrice": "23569.916",
-            "marketCode": "BTC-USDT-SWAP-LIN",
+            "marketCode": "BTC-oUSD-SWAP-LIN",
             "open24h": "23160.130",
             "openInterest": "0",
             "volume24h": "0"
@@ -401,7 +401,7 @@ There are two main ways to use it, one is to use the command without authenticat
             ]
         ],
         "checksum": 3475315026,
-        "marketCode": "BTC-USDT-SWAP-LIN",
+        "marketCode": "BTC-oUSD-SWAP-LIN",
         "timestamp": 1665454814328
     },
     "action": "partial"
@@ -449,7 +449,7 @@ There are two main ways to use it, one is to use the command without authenticat
   "timestamp": "1592491945248",
   "data": {
             "clientOrderId": 1,
-            "marketCode": "BTC-USDT-SWAP-LIN",
+            "marketCode": "BTC-oUSD-SWAP-LIN",
             "side": "BUY",
             "orderType": "LIMIT",
             "quantity": "1.5",

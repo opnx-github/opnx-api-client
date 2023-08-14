@@ -19,7 +19,7 @@ public class AccountPositionsExampleAsync {
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
         client.getAccountPositions(Arrays.asList("13670979-1621913298587", "test_opnx_api"),
-                "FLEX-USDT-SWAP-LIN",response -> System.out.println(JSONObject.toJSONString(response))
+                "FLEX-oUSD-SWAP-LIN",response -> System.out.println(JSONObject.toJSONString(response))
         );
     }
 }

@@ -10,12 +10,6 @@ import com.opnx.api.client.exception.OpnxApiException;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
-
-/**
- *
- *
- * @see
- */
 public class OrderBookEventDeserializer extends JsonDeserializer<OrderBookEvent> {
   private static Logger logger = Logger.getLogger( OrderBookEventDeserializer.class.getName());
   private ObjectMapper mapper;

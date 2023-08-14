@@ -17,7 +17,7 @@ import static com.opnx.api.client.constant.WebSocketCMDConstants.SUBSCRIBE_LIQUI
 public class LiquidationRFQWebSocketExample {
 
     /**
-     * {‘table’: ‘liquidationRFQ’, ‘data’: [{‘quantity’: ‘-0.100’, ‘marketCode’: ‘BTC-USDT-SWAP-LIN’, ‘timestamp’: ‘1676625682082’}]}
+     * {‘table’: ‘liquidationRFQ’, ‘data’: [{‘quantity’: ‘-0.100’, ‘marketCode’: ‘BTC-oUSD-SWAP-LIN’, ‘timestamp’: ‘1676625682082’}]}
      * @param args
      */
     public static void main(String[] args) {

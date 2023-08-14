@@ -15,7 +15,7 @@ public class MarketsExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<MarketsV3Resp>> marketsByMarketCode = client.getMarketsByMarketCode("BTC-USDT-SWAP-LIN");
+        OpnxV3RestResponse<List<MarketsV3Resp>> marketsByMarketCode = client.getMarketsByMarketCode("BTC-oUSD-SWAP-LIN");
         System.out.println(JSONObject.toJSONString(marketsByMarketCode));
     }
 

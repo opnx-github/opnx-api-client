@@ -17,7 +17,7 @@ public class OpenOrdersExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getOpenOrders("BTC-USDT-SWAP-LIN", null, null,
+        client.getOpenOrders("BTC-oUSD-SWAP-LIN", null, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
     }
 }

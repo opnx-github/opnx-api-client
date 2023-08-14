@@ -36,7 +36,7 @@ public class OpnxApiServiceGenerator {
                 .build();
     }
 
-    @SuppressWarnings("unchecked")
+
     private static final Converter<ResponseBody, OpnxApiError> errorBodyConverter =
             (Converter<ResponseBody, OpnxApiError>) converterFactory.responseBodyConverter(
                     OpnxApiError.class, new Annotation[0], null);
@@ -46,11 +46,11 @@ public class OpnxApiServiceGenerator {
     }
 
     /**
-     * Create a Opnx API service.
      *
      * @param serviceClass the type of service.
-     * @param apiKey       opnx API key.
-     * @param secret       opnx secret.
+     * @param apiKey  opnx API key.
+     * @param secret opnx secret.
+     * @param <S>    Object type
      * @return a new implementation of the API endpoints for the Opnx API service.
      */
     public static <S> S createService(Class<S> serviceClass, String apiKey, String secret) {
@@ -87,6 +87,7 @@ public class OpnxApiServiceGenerator {
      * @param secret       opnx secret.
      * @param nonce        nonce value eg: "123"
      * @param timestamp    timestamp eg: "2023-02-24T07:13:00"
+     * @param <S>          Object type
      * @return a new implementation of the API endpoints for the Opnx API service.
      */
     public static <S> S createService(Class<S> serviceClass, String apiKey, String secret, String nonce, String timestamp) {
@@ -114,9 +115,7 @@ public class OpnxApiServiceGenerator {
         return retrofit.create(serviceClass);
     }
 
-    /**
-     * Execute a REST call and block until the response is received.
-     */
+
     public static <T> T executeSync(Call<T> call) {
         try {
             Response<T> response = call.execute();
@@ -133,7 +132,10 @@ public class OpnxApiServiceGenerator {
     }
 
     /**
-     * Extracts and converts the response error body into an object.
+     * @param response Extracts and converts the response error body into an object.
+     * @return Extracts and converts the response error body into an object.
+     * @throws IOException      IOException
+     * @throws OpnxApiException OpnxApiException
      */
     public static OpnxApiError getOpnxApiError(Response<?> response) throws IOException, OpnxApiException {
         if (response.code() == 401) {
@@ -143,7 +145,7 @@ public class OpnxApiServiceGenerator {
     }
 
     /**
-     * Returns the shared OkHttpClient instance.
+     * @return Returns the shared OkHttpClient instance.
      */
     public static OkHttpClient getSharedClient() {
         return sharedClient;
