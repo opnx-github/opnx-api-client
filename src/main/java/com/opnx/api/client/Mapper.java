@@ -10,13 +10,15 @@ import java.io.IOException;
  */
 
 public class Mapper {
-    private static Logger logger = Logger.getLogger( Mapper.class.getName());
+    private static Logger logger = Logger.getLogger(Mapper.class.getName());
     private static ObjectMapper mapper = new ObjectMapper();
 
+
     /**
-     * @param json string in json-format
+     * @param json  string in json-format
      * @param clazz class of object for converting from json to java object
-     * @return an object with type <T> and data from json
+     * @param <T>   lass of object for converting from json to java object
+     * @return      an object with object type and data from json
      */
     public static <T> T asObject(String json, Class<T> clazz) {
         try {

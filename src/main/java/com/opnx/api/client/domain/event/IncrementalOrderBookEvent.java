@@ -9,7 +9,6 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @JsonDeserialize(using = IncrementalOrderBookEventDeserializer.class)
 public class IncrementalOrderBookEvent {
 
-  //
   private String	table;
   private IncrementalOrderBookData	data;
   private String	action;

@@ -16,7 +16,7 @@ public class AccountTradesExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<TradesV3Resp>> accountTrades = client.getAccountTrades("BTC-USDT-SWAP-LIN", 10L, 1l, null);
+        OpnxV3RestResponse<List<TradesV3Resp>> accountTrades = client.getAccountTrades("BTC-oUSD-SWAP-LIN", 10L, 1l, null);
         System.out.println(JSONObject.toJSONString(accountTrades));
     }
 }

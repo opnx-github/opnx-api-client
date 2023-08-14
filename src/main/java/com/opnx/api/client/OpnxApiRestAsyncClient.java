@@ -218,7 +218,7 @@ public interface OpnxApiRestAsyncClient {
     /**
      * Withdrawal history (asynchronous).
      *
-     * @param id
+     * @param id        id
      * @param asset     Default all assets
      * @param limit     Default 50, max 200
      * @param startTime Millisecond timestamp. Default 24 hours ago. startTime and endTime must be within 7 days of each other. This filter applies to "requestedAt"

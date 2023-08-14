@@ -17,7 +17,7 @@ public class Candles60sWebSocketExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(true,true);
         OpnxApiWebSocketClient webSocketClient = factory.newWebSocketClient();
 
-        String subscribeMessage = getSubscribeCMD("BTC-USDT-SWAP-LIN");
+        String subscribeMessage = getSubscribeCMD("BTC-oUSD-SWAP-LIN");
 
         OpnxApiWebSocketListener<CandlesEvent> listener = new OpnxApiWebSocketListener<>((result,listenerParam) -> {
             if(result != null){

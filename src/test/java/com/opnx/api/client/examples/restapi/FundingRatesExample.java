@@ -15,7 +15,7 @@ public class FundingRatesExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<FundingRatesV3Resp>> fundingRates = client.getFundingRates("BTC-USDT-SWAP-LIN", 6L, null, null);
+        OpnxV3RestResponse<List<FundingRatesV3Resp>> fundingRates = client.getFundingRates("BTC-oUSD-SWAP-LIN", 6L, null, null);
         System.out.println(JSONObject.toJSONString(fundingRates));
     }
 

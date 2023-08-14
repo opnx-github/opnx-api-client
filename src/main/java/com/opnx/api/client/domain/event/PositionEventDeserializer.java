@@ -13,11 +13,6 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 import java.util.List;
 
-/**
- *
- *
- * @see
- */
 public class PositionEventDeserializer extends JsonDeserializer<PositionEvent> {
   private static Logger logger = Logger.getLogger( PositionEventDeserializer.class.getName());
   private ObjectMapper mapper;

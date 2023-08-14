@@ -17,7 +17,7 @@ public class FundingPaymentsExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getAccountFundingPayments("BTC-USDT-SWAP-LIN", 10L, 0L, null,
+        client.getAccountFundingPayments("BTC-oUSD-SWAP-LIN", 10L, 0L, null,
                 response -> System.out.println(JSONObject.toJSONString(response)));
 
 

@@ -12,12 +12,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.List;
-
-/**
- *
- *
- * @see
- */
 public class BalanceEventDeserializer extends JsonDeserializer<BalanceEvent> {
   private static Logger logger = Logger.getLogger( BalanceEventDeserializer.class.getName());
   private ObjectMapper mapper;

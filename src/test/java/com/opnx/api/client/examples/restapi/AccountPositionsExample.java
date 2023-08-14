@@ -17,7 +17,7 @@ public class AccountPositionsExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<PositionsV3Resp>> accountPositions = client.getAccountPositions(Arrays.asList("13670979-1621913298587", "test_opnx_api"), "BTC-USDT-SWAP-LIN");
+        OpnxV3RestResponse<List<PositionsV3Resp>> accountPositions = client.getAccountPositions(Arrays.asList("13670979-1621913298587", "test_opnx_api"), "BTC-oUSD-SWAP-LIN");
         System.out.println(JSONObject.toJSONString(accountPositions));
     }
 }

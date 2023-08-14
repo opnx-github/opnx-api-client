@@ -9,12 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opnx.api.client.exception.OpnxApiException;
 import org.apache.log4j.Logger;
 import java.io.IOException;
-
-/**
- *
- *
- * @see
- */
 public class DepthEventDeserializer extends JsonDeserializer<DepthEvent> {
   private static Logger logger = Logger.getLogger( DepthEventDeserializer.class.getName());
   private ObjectMapper mapper;

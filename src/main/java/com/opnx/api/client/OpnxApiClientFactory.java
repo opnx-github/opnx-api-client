@@ -212,14 +212,16 @@ public class OpnxApiClientFactory {
     }
 
     /**
-     * Creates a new synchronous/blocking REST client.
+     *
+     * @return Creates a new synchronous/blocking REST client.
      */
     public OpnxApiRestClient newRestClient() {
         return new OpnxApiRestClientImpl(apiKey, secret);
     }
 
     /**
-     * Creates a new synchronous/blocking REST client.
+     *
+     * @return Creates a new synchronous/blocking REST client.
      */
     public OpnxApiRestClient newRestClientWithNonceAndTimestamp() {
         return new OpnxApiRestClientImpl(apiKey, secret, nonce, timestamp);
@@ -227,7 +229,8 @@ public class OpnxApiClientFactory {
 
 
     /**
-     * Creates a new web socket client used for handling data streams.
+     *
+     * @return Creates a new web socket client used for handling data streams.
      */
     public OpnxApiWebSocketClient newWebSocketClient() {
         return new OpnxApiWebSocketClientImpl(getSharedClient());
@@ -235,14 +238,16 @@ public class OpnxApiClientFactory {
 
 
     /**
-     * Creates a new asynchronous/non-blocking REST client.
+     *
+     * @return Creates a new asynchronous/non-blocking REST client.
      */
     public OpnxApiRestAsyncClient newAsyncRestClient() {
         return new OpnxApiAsyncRestClientImpl(apiKey, secret);
     }
 
     /**
-     * Creates a new asynchronous/non-blocking REST client.
+     *
+     * @return  Creates a new asynchronous/non-blocking REST client.
      */
     public OpnxApiRestAsyncClient newAsyncRestClientWithNonceAndTimestamp() {
         return new OpnxApiAsyncRestClientImpl(apiKey, secret, nonce, timestamp);

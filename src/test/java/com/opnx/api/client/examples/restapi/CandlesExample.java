@@ -15,7 +15,7 @@ public class CandlesExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<CandlesV3Resp>> candles = client.getCandles("BTC-USDT-SWAP-LIN", "60s", 10L, null, null);
+        OpnxV3RestResponse<List<CandlesV3Resp>> candles = client.getCandles("BTC-oUSD-SWAP-LIN", "60s", 10L, null, null);
         System.out.println(JSONObject.toJSONString(candles));
 
     }

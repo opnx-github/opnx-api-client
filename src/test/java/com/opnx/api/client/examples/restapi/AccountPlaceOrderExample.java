@@ -22,7 +22,7 @@ public class AccountPlaceOrderExample {
         List<OrderRequest> orderRequestList = new ArrayList<>();
         OrderRequest orderRequest = new OrderRequest();
         orderRequest.setClientOrderId(System.currentTimeMillis());
-        orderRequest.setMarketCode("BCH-USDTT-SWAP-LIN");
+        orderRequest.setMarketCode("BCH-oUSD-SWAP-LIN");
         orderRequest.setSide("BUY");
         orderRequest.setQuantity(new BigDecimal("0.11"));
         orderRequest.setTimeInForce("GTC");

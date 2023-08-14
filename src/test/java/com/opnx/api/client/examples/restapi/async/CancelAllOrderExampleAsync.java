@@ -11,7 +11,7 @@ public class CancelAllOrderExampleAsync {
 
     public static void main(String[] args) {
         OrderCancelAllParamV3 orderCancelAllParamV3 = new OrderCancelAllParamV3();
-        orderCancelAllParamV3.setMarketCode("BTC-USDT-SWAP-LIN");
+        orderCancelAllParamV3.setMarketCode("BTC-oUSD-SWAP-LIN");
 
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance(OpnxApiConfig.API_KEY, OpnxApiConfig.API_KEY_SECRET);
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();

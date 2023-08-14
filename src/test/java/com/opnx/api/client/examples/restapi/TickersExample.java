@@ -15,7 +15,7 @@ public class TickersExample {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestClient client = factory.newRestClient();
 
-        OpnxV3RestResponse<List<TickerV3Resp>> tickersByMarketCode = client.getTickersByMarketCode("BTC-USDT-SWAP-LIN");
+        OpnxV3RestResponse<List<TickerV3Resp>> tickersByMarketCode = client.getTickersByMarketCode("BTC-oUSD-SWAP-LIN");
         System.out.println(JSONObject.toJSONString(tickersByMarketCode));
     }
 

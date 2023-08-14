@@ -27,7 +27,7 @@ public class AccountPlaceOrderExampleAsync {
          *     "orders": [
          *              {
          *                    "clientOrderId": 1612249737724,
-         *                    "marketCode": "BTC-USDT-SWAP-LIN",
+         *                    "marketCode": "BTC-oUSD-SWAP-LIN",
          *                    "side": "SELL",
          *                    "quantity": "0.001",
          *                    "timeInForce": "GTC",
@@ -36,7 +36,7 @@ public class AccountPlaceOrderExampleAsync {
          *                },
          *                {
          *                    "clientOrderId": 1612249737724,
-         *                    "marketCode": "BTC-USDT-SWAP-LIN",
+         *                    "marketCode": "BTC-oUSD-SWAP-LIN",
          *                    "side": "BUY",
          *                    "quantity": "0.002",
          *                    "timeInForce": "GTC",
@@ -54,7 +54,7 @@ public class AccountPlaceOrderExampleAsync {
         List<OrderRequest> orderRequestList = new ArrayList<>();
         OrderRequest orderRequest = new OrderRequest();
         orderRequest.setClientOrderId(System.currentTimeMillis());
-        orderRequest.setMarketCode("BTC-USDT-SWAP-LIN");
+        orderRequest.setMarketCode("BTC-oUSD-SWAP-LIN");
         orderRequest.setSide("BUY");
         orderRequest.setQuantity(new BigDecimal("0.001"));
         orderRequest.setTimeInForce("GTC");

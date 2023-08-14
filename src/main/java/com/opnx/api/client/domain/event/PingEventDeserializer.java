@@ -10,11 +10,7 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-/**
- *
- *
- * @see
- */
+
 public class PingEventDeserializer extends JsonDeserializer<PingEvent> {
   private static Logger logger = Logger.getLogger( PingEventDeserializer.class.getName());
   private ObjectMapper mapper;

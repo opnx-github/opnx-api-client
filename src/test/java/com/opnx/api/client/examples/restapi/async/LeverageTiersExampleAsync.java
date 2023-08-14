@@ -11,7 +11,7 @@ public class LeverageTiersExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getLeverageTiersByMarketCode("BTC-USDT-SWAP-LIN",
+        client.getLeverageTiersByMarketCode("BTC-oUSD-SWAP-LIN",
                 response -> System.out.println(JSONObject.toJSONString(response)));
     }
 

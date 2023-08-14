@@ -22,7 +22,7 @@ public class CancelOrderExample {
         batchOrderRequest.setTimestamp(System.currentTimeMillis());
         List<OrderRequest> orderRequestList = new ArrayList<>();
         OrderRequest orderRequest = new OrderRequest();
-        orderRequest.setMarketCode("BTC-USDT-SWAP-LIN");
+        orderRequest.setMarketCode("BTC-oUSD-SWAP-LIN");
         orderRequest.setOrderId(1000079235084L);
         orderRequestList.add(orderRequest);
         batchOrderRequest.setOrders(orderRequestList);

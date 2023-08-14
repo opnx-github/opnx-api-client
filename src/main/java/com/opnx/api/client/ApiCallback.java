@@ -14,7 +14,7 @@ public interface ApiCallback<T> {
      * Called whenever a response comes back from the Opnx API.
      *
      * @param event                                 the expected response object
-     * @param multipleCallbacksApiWebSocketListener
+     * @param multipleCallbacksApiWebSocketListener  multipleCallbacksApiWebSocketListener
      */
     void onResponse(T event, MultipleCallbacksWebSocketListener multipleCallbacksApiWebSocketListener);
 

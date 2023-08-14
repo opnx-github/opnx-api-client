@@ -16,7 +16,7 @@ public class TickersExampleAsync {
         OpnxApiClientFactory factory = OpnxApiClientFactory.newInstance();
         OpnxApiRestAsyncClient client = factory.newAsyncRestClient();
 
-        client.getTickersByMarketCode("BTC-USDT-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
+        client.getTickersByMarketCode("BTC-oUSD-SWAP-LIN", response -> System.out.println(JSONObject.toJSONString(response)));
     }
 
 }
